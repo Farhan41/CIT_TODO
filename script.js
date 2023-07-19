@@ -23,13 +23,22 @@ function cT(){
     ul.innerHTML = "";
     arr.map((item)=>{
 
-        ul.innerHTML += `<li>${item}<button class="edit">Edit</button><button class="delete">Delete</button></li>`;
+        ul.innerHTML += `<li class="item">
+        <div class="line">
+            <div id="round"></div>
+            <div class ="demo">${item}</div>
+        </div>
+        <div><button class="edit">Edit</button>
+            <button class="delete">Delete</button></div>
+    </li>`;
 
         let del = document.querySelectorAll(".delete");
+        // console.log(del);
         let delArr = Array.from(del);
         delArr.map((dtem,ddx)=>{
             dtem.addEventListener("click",function(){
                 arr.splice(ddx,1);
+                // console.log(arr);
                 cT()
             })
         })
@@ -45,18 +54,42 @@ function cT(){
             })
         })
 
+        
+
     });
 
     updt.addEventListener("click", function(){
         arr[upID] = inpt.value;
         inpt.value = "";
         cT();
+        console.log(arr)
         updt.style.display = "none";
         btn.style.display = "inline-block";
+        upID = "";
     })
+
+    let demo = document.querySelector(".demo");
+
+    demo.addEventListener("click",function(){
+    demo.classList.toggle("test");
+    })
+
+   
 
     
 }
+
+
+
+
+
+// let line = document.querySelector(".line");
+
+// line.addEventListener("click", function(){
+//    line.classList.toggle("test");
+// })
+
+
 
 
 

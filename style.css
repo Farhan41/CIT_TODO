@@ -1,7 +1,49 @@
+.container{
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+
+.box {
+    padding-top: 20px;
+     margin: 4px 126px;
+}
+
+
+.item{
+    display: flex;
+    justify-content:space-between;
+    padding: 5px 0;
+}
+
 .error{
     color: red;
 }
 
 .update{
     display: none;
+}
+
+button{
+    background: green;
+    color: white;
+    
+}
+
+.test{
+    
+    text-decoration: line-through;
+}
+
+#round{
+    margin-right: 5px;
+    margin-top: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.line{
+    display: flex;
 }
