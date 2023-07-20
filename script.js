@@ -68,11 +68,15 @@ function cT(){
         upID = "";
     })
 
-    let demo = document.querySelector(".demo");
+    let demo = document.querySelectorAll(".demo");
+    let demoArr = Array.from(demo);
+    demoArr.map((lindex)=>{
+        lindex.addEventListener("click",function(){
+            lindex.classList.toggle("test");
+            })
+    }) 
 
-    demo.addEventListener("click",function(){
-    demo.classList.toggle("test");
-    })
+    
 
    
 

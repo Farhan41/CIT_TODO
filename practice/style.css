@@ -1,0 +1,12 @@
+.error{
+    color: red;
+}
+
+.check{
+    display: inline;
+    text-decoration: line-through;
+}
+
+#grab{
+    display: inline;
+}
